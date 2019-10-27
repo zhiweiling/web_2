@@ -1,0 +1,21 @@
+<h1>My First AngularDart App</h1>
+
+<todo-list></todo-list>
+<todo-list1></todo-list1>
+<call-name></call-name>
+
+<h1>{{title}}</h1>
+<h2>Heroes</h2>
+
+
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes"
+      [class.selected]="hero === selected"
+      (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+<my-hero [hero]="selected"></my-hero>
+
